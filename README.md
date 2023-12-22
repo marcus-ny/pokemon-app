@@ -16,21 +16,18 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features implemented
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Home Page with all 1302 pokemon's names rendered
+2. Individual page for Pokemons (with navigation back to main page and buttons to add to/remove from roster)
+3. Roster sidebar allowing for up to 6 pokemons (names on the roster can also be clicked to navigate to the pokemon's page for easier deletion)
 
-## Learn More
+### API and Data
 
-To learn more about Next.js, take a look at the following resources:
+All data in this assignment has been fetched from https://pokeapi.co/, including the sprite images. For the rendering of sprite images, the "front_default" image URL was used.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Design details
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. For the Pokemon Search Bar, the client component, "Search Bar", was used to dynamically render the search results as the user types. Since there was a need to render the server-side component, "PokemonData" (responsible for fetching the list of all pokemon names on the home page), the server component was passed as a child to the client component, following the composition pattern outlined at https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns.
+2. To keep Roster data, a global react Context called "RosterContext" was created to track the state.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
