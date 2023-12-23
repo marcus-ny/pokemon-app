@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import RosterContext from "./components/RosterContext";
+import RosterContext from "./contexts/RosterContext";
 import PokemonRoster from "./components/PokemonRoster";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,12 +22,9 @@ export default function RootLayout({
         <RosterContext>
           <main>
             <div className="flex h-screen">
-              {/* Fixed Sidebar */}
               <div className="w-1/4 max-w-48 bg-gray-200 p-4">
                 <PokemonRoster></PokemonRoster>
               </div>
-
-              {/* Scrollable Content */}
               <div className="flex-1 overflow-y-auto p-4">{children}</div>
             </div>
           </main>
@@ -36,11 +33,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-/*<div className="flex">
-<div className="w-1/4 p-4 border-r-2 bg-blue-200">
-<PokemonRoster></PokemonRoster>
-</div>
-<div className="flex p-4"></div>
-{children}
-</div>*/

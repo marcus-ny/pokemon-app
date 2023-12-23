@@ -1,6 +1,6 @@
 "use client";
 import React, { useContext } from "react";
-import { RosterData } from "../components/RosterContext";
+import { RosterData } from "../contexts/RosterContext";
 
 interface Props {
   pokemonName: string;
@@ -15,7 +15,7 @@ const RemoveFromRoster = ({ pokemonName, pokemonId, imageUrl }: Props) => {
   };
   return (
     <button className="btn bg-red-500" onClick={handleClickRemove}>
-      Remove
+      Remove From Roster
     </button>
   );
 };

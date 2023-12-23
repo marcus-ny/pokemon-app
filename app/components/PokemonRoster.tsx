@@ -1,6 +1,6 @@
 "use client";
 import React, { useContext } from "react";
-import { RosterData } from "./RosterContext";
+import { RosterData } from "../contexts/RosterContext";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -17,7 +17,10 @@ const PokemonRoster = () => {
             <li className="py-2" key={pokemon.id}>
               <div>
                 <div>
-                  <Link href={pokemon.name}>{pokemon.name}</Link>
+                  <Link href={pokemon.name}>
+                    {pokemon.name.charAt(0).toUpperCase() +
+                      pokemon.name.slice(1)}
+                  </Link>
                 </div>
                 <div>
                   <Image
@@ -37,23 +40,3 @@ const PokemonRoster = () => {
 };
 
 export default PokemonRoster;
-
-/*<table className="table">
-        <tbody>
-          {roster.map((pokemon) => (
-            <tr key={pokemon.id}>
-              <td className="p-4">
-                <Link href={pokemon.name}>{pokemon.name}</Link>
-              </td>
-              <td>
-                <Image
-                  src={pokemon.imageUrl}
-                  alt={`${pokemon.name} Image`}
-                  height={10}
-                  width={10}
-                ></Image>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>*/

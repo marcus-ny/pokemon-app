@@ -37,7 +37,9 @@ const PokemonData = async ({ query }: Props) => {
             var url = "/" + pokemon.name;
             return (
               <li key={pokemon.name}>
-                <Link href={url}>{pokemon.name}</Link>
+                <Link href={url}>
+                  {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+                </Link>
               </li>
             );
           })}
