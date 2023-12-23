@@ -29,5 +29,5 @@ All data in this assignment has been fetched from https://pokeapi.co/, including
 ### Design details
 
 1. For the Pokemon Search Bar, the client component, "Search Bar", was used to dynamically render the search results as the user types. Since there was a need to render the server-side component, "PokemonData" (responsible for fetching the list of all pokemon names on the home page), the server component was passed as a child to the client component, following the composition pattern outlined at https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns.
-2. To keep Roster data, a global react Context called "RosterContext" was created to track the state.
+2. To keep Roster data, a global react Context called "RosterContext" is used to track the team's state.
 
