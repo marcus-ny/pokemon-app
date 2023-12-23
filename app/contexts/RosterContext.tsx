@@ -24,13 +24,6 @@ const RosterContext = ({ children }: { children: ReactNode }) => {
   //const [roster, setRoster] = useState<string[]>([]);
   const [roster, setRoster] = useState<listedPokemon[]>([]);
   const addToRoster = (pname: string, pid: number, pimageUrl: string) => {
-    /*
-    if (roster.length < 6 && !roster.includes(name)) {
-      console.log("adding this " + name + " in Roster bar");
-      setRoster((prevRoster) => [...prevRoster, name]);
-    } else {
-      if (roster.length >= 6) console.log("Roster is at max capacity of 6!");
-      else console.log("Pokemon you selected is already in Roster");*/
     const newPokemon = { name: pname, id: pid, imageUrl: pimageUrl };
     if (
       roster.length < 6 &&

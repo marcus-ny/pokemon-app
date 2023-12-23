@@ -9,8 +9,8 @@ export default function SearchBar({ placeholder }: { placeholder: string }) {
 
   function handleSearch(term: string) {
     const params = new URLSearchParams(searchParams);
-    console.log(term);
-    console.log(params);
+    //console.log(term);
+    //console.log(params);
     if (term) params.set("query", term);
     else params.delete("query");
     replace(`${pathname}?${params.toString()}`);

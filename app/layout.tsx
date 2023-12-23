@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import RosterContext from "./components/RosterContext";
+import RosterContext from "./contexts/RosterContext";
 import PokemonRoster from "./components/PokemonRoster";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -33,11 +33,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-/*<div className="flex">
-<div className="w-1/4 p-4 border-r-2 bg-blue-200">
-<PokemonRoster></PokemonRoster>
-</div>
-<div className="flex p-4"></div>
-{children}
-</div>*/

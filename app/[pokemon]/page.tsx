@@ -27,16 +27,24 @@ const PokemonPage = async ({ params: { pokemon } }: Props) => {
             <button className="btn btn-primary">Back To Menu</button>
           </Link>
         </div>
-        <div>
+
+        <div className="mt-4">
+          <h1 className="font-bold">
+            {pokemon.charAt(0).toUpperCase() + pokemon.slice(1)}
+          </h1>
+        </div>
+
+        <div className="mt-4">
           <Image
             src={spriteURL}
             width="500"
             height="500"
-            alt={"POKEMON"}
+            alt={pokemon + "picture"}
+            className="border border-gray-900"
           ></Image>
         </div>
 
-        <div>
+        <div className="mt-4">
           <AddToRoster
             pokemonName={pokemon}
             pokemonId={current.id}
