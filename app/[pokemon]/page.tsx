@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import AddToRoster from "./AddToRoster";
 import RemoveFromRoster from "./RemoveFromRoster";
-
+import { Suspense } from "react";
 interface Props {
   params: { pokemon: string };
 }

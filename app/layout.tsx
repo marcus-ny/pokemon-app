@@ -22,12 +22,9 @@ export default function RootLayout({
         <RosterContext>
           <main>
             <div className="flex h-screen">
-              {/* Fixed Sidebar */}
               <div className="w-1/4 max-w-48 bg-gray-200 p-4">
                 <PokemonRoster></PokemonRoster>
               </div>
-
-              {/* Scrollable Content */}
               <div className="flex-1 overflow-y-auto p-4">{children}</div>
             </div>
           </main>
