@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Features implemented
 
-1. Home Page with all 1302 pokemon's names rendered
+1. Home Page with all 1302 pokemon's names rendered (Click the magnifying glass to see details)
 2. Individual page for Pokemons (with navigation back to main page and buttons to add to/remove from roster)
 3. Roster sidebar allowing for up to 6 pokemons (names on the roster can also be clicked to navigate to the pokemon's page for easier deletion)
 
